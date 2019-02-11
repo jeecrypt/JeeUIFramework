@@ -36,7 +36,7 @@ void button_save(String title, int color){
         case 7: page_content += F("light"); break;
         case 8: page_content += F("dark"); break;
     }
-    page_content += F(" btn-block\" onclick=\"AjaxFormRequest('formMain', '/post');\" value=\"");
+    page_content += F(" btn-block\" onclick=\"sendForm('formMain', '/post');\" value=\"");
     page_content += title;
     page_content += F("\"><br>");
 }

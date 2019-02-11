@@ -6,6 +6,8 @@ void create_parameters()
     create_param(F("wifi_mode"), "1"); // wifi mode. 1 - AP, 2 - STA
     create_param(F("ssid"), F("Musa Pro"));
     create_param(F("pass"), F("Gigabyte2014"));
+
+    create_param("blink_interval", "1000");
 }
 #include "sys/debug.h"
 void make_page(int page)
@@ -18,7 +20,8 @@ void make_page(int page)
     switch (page)
     {
     case 0: // Settings Page
-
+        input_range("blink_interval", "blink_interval", 50, 5000, "Интервал блинка");
+        
         button_save(F("Save"), 1);
         button_reboot(F("Reboot device"), 4);
         break;

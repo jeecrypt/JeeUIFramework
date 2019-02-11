@@ -51,7 +51,7 @@ void wifi_connect()
         {
             WiFi.mode(WIFI_OFF);
             WiFi.mode(WIFI_AP);
-            WiFi.softAP("DELTA IoT");
+            WiFi.softAP("JeeUI");
             Serial.println(F("Start Wi-Fi AP mode!"));
             break;
         }

@@ -57,35 +57,32 @@
     {
       server.on("/post", HTTP_ANY, [](AsyncWebServerRequest *request) {
         int params = request->params();
-        AsyncWebParameter* p;
-        for (int i = 0; i < params; i++) {
+        AsyncWebParameter *p;
+        for (int i = 0; i < params; i++)
+        {
           p = request->getParam(i);
           write_param(p->name(), p->value());
+          DEBG(String(p->name() + ": " + String(p->value())));
         }
-          request->send(200, F("text/plain"), F("Настройки сохранены!"));
-          save_flag = true;
-          gpio_setup();
+        request->send(200, F("text/plain"), F("Настройки сохранены!"));
+        save_flag = true;
+        gpio_setup();
       });
-}
+    }
 
-void p_index_html(){
-  server.on("/", HTTP_ANY, [](AsyncWebServerRequest *request) {
-    AsyncWebServerResponse *response = request->beginResponse_P(200, F("text/html"), template_default, template_default_len);
-    response->addHeader(F("Content-Encoding"), F("gzip"));
-    request->send(response);
-  });
+    void p_index_html()
+    {
+      server.on("/", HTTP_ANY, [](AsyncWebServerRequest *request) {
+        AsyncWebServerResponse *response = request->beginResponse_P(200, F("text/html"), template_default, template_default_len);
+        response->addHeader(F("Content-Encoding"), F("gzip"));
+        request->send(response);
+      });
 }
 
 void page_support(){
 
   server.on("/css/bootstrap.min.css", HTTP_ANY, [](AsyncWebServerRequest *request) {
     AsyncWebServerResponse *response = request->beginResponse_P(200, F("text/plain"), bootstrap_css, bootstrap_css_len);
-    response->addHeader(F("Content-Encoding"), F("gzip"));
-    request->send(response);
-  });
-
-  server.on("/js/bootstrap.min.js", HTTP_ANY, [](AsyncWebServerRequest *request) {
-    AsyncWebServerResponse *response = request->beginResponse_P(200, F("application/javascript"), bootstrap_js, bootstrap_js_len);
     response->addHeader(F("Content-Encoding"), F("gzip"));
     request->send(response);
   });

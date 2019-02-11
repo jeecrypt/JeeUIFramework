@@ -146,7 +146,7 @@ void param_table()
 {
     DynamicJsonBuffer jsonBuffer;
     JsonObject &root = jsonBuffer.parseObject(json_config);
-    page_content += F("<table class=\"table text-justify\" style=\"font-size: 14px; word-break: break-all\"><thead><tr><th>Параметр</th><th>Значение</th></tr></thead><tbody>");
+    page_content += F("<table class=\"table text-justify\" style=\"font-size: 14px; word-break: break-all\"><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>");
     int num = 1;
     for (auto kv : root)
     {

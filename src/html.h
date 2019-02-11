@@ -18,6 +18,7 @@ void make_page(int page)
     switch (page)
     {
     case 0: // Settings Page
+
         button_save(F("Save"), 1);
         button_reboot(F("Reboot device"), 4);
         break;
@@ -26,6 +27,7 @@ void make_page(int page)
         wifi_scan(); // Wi-Fi Scan table
         input_text(F("ssid"), F("ssid"), F("text"), "", F("SSID"));
         input_text("", F("pass"), F("password"), "", F("Password"));
+
         select_elements("1", F("AP"));
         select_elements("2", F("STA"));
         input_select("", F("wifi_mode"), false, F("Wi-Fi Mode"));
@@ -35,10 +37,10 @@ void make_page(int page)
         break;
     case 2: // Info page
 
-    
         border(F("All Parameters"));
         param_table();
         border("");
         break;
     }
+
 }

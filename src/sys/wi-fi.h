@@ -86,7 +86,7 @@ void wifi_connect()
 void wifi_scan()
 {
     int n = WiFi.scanComplete();
-    page_content += F("<table class=\"table\"><thead><tr><th>#</th><th>Имя сети</th><th>Канал</th><th>RSSI</th></tr></thead><tbody>");
+    page_content += F("<table class=\"table\"><thead><tr><th>#</th><th>SSID</th><th>Chanel</th><th>RSSI</th></tr></thead><tbody>");
     if (n == WIFI_SCAN_FAILED)
         WiFi.scanNetworks(true);
     else if (n)
@@ -111,7 +111,7 @@ void wifi_scan()
             WiFi.scanNetworks(true);
         }
     }
-    page_content += F("</tbody></table><input type=\"button\" value=\"Поиск сетей\" onclick=\"page_update(");
+    page_content += F("</tbody></table><input type=\"button\" value=\"Search\" onclick=\"page_update(");
     page_content += current_page;
     page_content += F(");\" class=\"btn btn-outline-primary btn-lg btn-block \"><br>");
 }

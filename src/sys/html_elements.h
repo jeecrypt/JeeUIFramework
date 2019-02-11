@@ -93,12 +93,12 @@ void input_text(String id, String name, String type, String placeholder, String 
     page_content += F("\"></div>");
 }
 
-void border(String name)
+void border(String title)
 {
-    if (name != "")
+    if (title != "")
     {
         page_content += F("<fieldset class=\"border p-2\"><legend class=\"w-auto\" style=\"font-size: 1em\">");
-        page_content += name;
+        page_content += title;
         page_content += F("</legend>");
         
     }

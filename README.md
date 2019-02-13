@@ -1,11 +1,14 @@
 # JeeUI Framework
-**WEB interface and config file for esp8266 and esp322**
+**WEB interface and config file for ESP8266 and ESP32**
 
 Описание ра русском языке [**сдесь**](http://jeegit.ru/2019/02/11/jeeuiframework)
 
 Use my code as a template for your **ESP8266** and **ESP32** projects.
 The framework will help you use the configuration file and the web interface.
 As a development environment, I highly recommend using [PlatformIO](https://platformio.org)!
+
+You can purchase esp32 via this [link](http://ali.pub/3447ws)
+And esp8266 via this [link](http://ali.pub/34481n)
 
 To get started, you need to create parameters that will later be configured using the web interface. The parameter is actually a json object. The following manipulations are done in the file 'html.h'
 

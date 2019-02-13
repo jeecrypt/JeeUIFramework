@@ -1,4 +1,4 @@
-# JeeUIF ramework
+# JeeUI Framework
 **WEB interface and config file for esp8266 and esp322**
 
 Описание ра русском языке [**сдесь**](http://jeegit.ru/2019/02/11/jeeuiframework)

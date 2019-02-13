@@ -1,5 +1,7 @@
-# JeeUIFramework
-**The framework will allow you in a few minutes to create a web interface for your projects on ESP8266 and ESP32**
+# JeeUIF ramework
+**WEB interface and config file for esp8266 and esp322**
+
+Описание ра русском языке [**сдесь**](http://jeegit.ru/2019/02/11/jeeuiframework)
 
 Use my code as a template for your **ESP8266** and **ESP32** projects.
 The framework will help you use the configuration file and the web interface.

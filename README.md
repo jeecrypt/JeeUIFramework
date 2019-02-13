@@ -5,10 +5,12 @@
 
 Use my code as a template for your **ESP8266** and **ESP32** projects.
 The framework will help you use the configuration file and the web interface.
-As a development environment, I highly recommend using [PlatformIO](https://platformio.org)!
+As a development environment, I highly recommend using [PlatformIO](http://jeegit.ru/wp-content/uploads/2019/02/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA-1.jpg)!
 
 You can purchase esp32 via this [link](http://ali.pub/3447ws)
 And esp8266 via this [link](http://ali.pub/34481n)
+
+![title](https://github.com/username/reponame/blob/master/subfolders.../filename.jpg)
 
 To get started, you need to create parameters that will later be configured using the web interface. The parameter is actually a json object. The following manipulations are done in the file 'html.h'
 

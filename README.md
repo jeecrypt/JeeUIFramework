@@ -12,7 +12,7 @@ And esp8266 via this [link](http://ali.pub/34481n)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=VcrKS47OOtk
 " target="_blank"><img src="http://img.youtube.com/vi/VcrKS47OOtk/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+alt="IMAGE ALT TEXT HERE" width="360" height="180" border="10" /></a>
 
 ![Screenshot](http://jeegit.ru/wp-content/uploads/2019/02/0001.jpg)
 

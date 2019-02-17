@@ -8,7 +8,7 @@ void onSTAGotIP(WiFiEventStationModeGotIP ipInfo)
 {
     Serial.printf("Got IP: %s\r\n", ipInfo.ip.toString().c_str());
     Serial.printf("Connected: %s\r\n", WiFi.status() == WL_CONNECTED ? "yes" : "no");
-    ip_ok = true;
+    get_ip = true;
     led_mode = 1;
     ip_addres = WiFi.localIP().toString();
 }
@@ -30,6 +30,7 @@ void WiFiEvent(WiFiEvent_t event, system_event_info_t info)
         Serial.println("Connected to :" + String(WiFi.SSID()));
         Serial.print("Got IP: ");
         Serial.println(WiFi.localIP());
+        get_ip = true;
         led_mode = 1;
         break;
     case SYSTEM_EVENT_STA_DISCONNECTED:

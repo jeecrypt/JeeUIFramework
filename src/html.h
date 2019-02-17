@@ -7,9 +7,10 @@ void create_parameters()
     create_param(F("ssid"), F("Musa Pro"));
     create_param(F("pass"), F("Gigabyte2014"));
 
-    create_param("blink_interval", "1000");
+    create_param(F("text"), F("Привет Заяц!"));
+    create_param(F("speed"), F("40"));
 }
-#include "sys/debug.h"
+#include "sys/JeeUI.h"
 void make_page(int page)
 {
     // Menu
@@ -20,7 +21,8 @@ void make_page(int page)
     switch (page)
     {
     case 0: // Settings Page
-        input_range("blink_interval", "blink_interval", 50, 5000, "Интервал блинка");
+        input_text(F("text"), F("text"), "text", "тут будет текст", "Введите текст");
+        input_range(F("speed"), F("speed"), 10, 60, "Скрорость прокрутки");
         
         button_save(F("Save"), 1);
         button_reboot(F("Reboot device"), 4);
